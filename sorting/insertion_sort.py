@@ -4,8 +4,14 @@ import numpy as np
 """
     Insertion sort
 
-    Time complexity : O(n^2)
-    Space complexity : O(n)
+    Time complexity :
+    ----------------
+    - average O(n^2)
+    - worst case O(n^2) : when list sorted in reverse order
+    - best case O(n) : when list already sorted
+
+    Space complexity : O(1)
+    -----------------
 
 """
 

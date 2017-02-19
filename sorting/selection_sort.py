@@ -4,8 +4,14 @@ import numpy as np
 """
     Selection sort
 
-    Time complexity : O(n^2)
+    Time complexity :
+    ----------------
+    - average O(n^2)
+    - worst case O(n^2)
+    - best case O(n^2)
+
     Space complexity : O(1)
+    ----------------
 
 """
 
