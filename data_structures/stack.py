@@ -35,6 +35,7 @@ class Stack(list):
     def pop(self):
         """
         Remove last element added from the stack
+
         :return: self | Stack  with last element removed
         """
         self.pop()
