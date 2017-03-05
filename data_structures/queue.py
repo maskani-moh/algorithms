@@ -14,12 +14,21 @@
 
 """
 
-class Queue(list):
+class Queue:
 
-    def __init__(self):
-        super(Queue, self).__init__()
-        # TODO : use deque from 'collections' module
-        # TODO : add max_size parameter ?
+    def __init__(self, l=None):
+        """
+        Constructor
+
+        :param l: list | initial queue
+        """
+        if l is None:
+            self.queue = list()
+        else:
+            self.queue = l
+
+    def __str__(self):
+        return "{}".format(self.queue)
 
     def enqueue(self, x):
         """
@@ -28,9 +37,8 @@ class Queue(list):
         :param x: undefined | Element to add
         :return: self | Queue with new element added at the end
         """
-        self.append(x)
+        self.queue.append(x)
 
-    # TODO : complete
     def dequeue(self):
         """
         Remove the first element enqueued that is still in the queue
@@ -43,13 +51,28 @@ class Queue(list):
             l_.pop()
             return l_[::-1]
 
-        return self
+        self.queue = _pop_left(self.queue)
 
     def is_empty(self):
-        pass
+        """
+        Checks if the queue is empty
+
+        :return: boolean | True if self.queue is empty, False otherwise
+        """
+        return len(self.queue) == 0
 
     def size(self):
-        pass
+        """
+        Gets size of the queue
+
+        :return: int | Size of the queue
+        """
+        return len(self.queue)
 
     def peek(self):
-        pass
+        """
+        Get the value at the beginning of the queue
+
+        :return:
+        """
+        return self.queue[0]
