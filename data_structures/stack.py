@@ -16,7 +16,6 @@ class Stack(list):
         super(Stack, self).__init__()
         self.max_size = max_size
 
-    #TODO : to call "add" instead ?
     def push(self, x):
         """
         Add element in the stack
@@ -25,13 +24,11 @@ class Stack(list):
         :return: self | Stack with new element added at the end
         """
         if self.is_full():
-            #TODO : check what error to raise ?
             print("Cannot add element. Stack is full. Risk of overflow.")
             pass
 
         self.append(x)
 
-    # TODO : to call "remove" instead ?
     def pop(self):
         """
         Remove last element added from the stack
