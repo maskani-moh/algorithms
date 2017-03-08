@@ -60,8 +60,10 @@ def merge(seq_1, seq_2):
         return seq_1
 
     res = []
+
+    min_len = min(len(seq_1), len(seq_2))
     k, l = 0, 0
-    while k < len(seq_1) and l < len(seq_2):
+    while k < min_len and l < min_len:
         if seq_1[k] <= seq_2[l]:
             res.append(seq_1[k])
             k += 1
