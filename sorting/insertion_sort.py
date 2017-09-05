@@ -52,6 +52,22 @@ def insertion_sort(my_list, order='ascending', in_place=True):
     if not in_place:
         return my_list
 
+def insertion_sort2(my_list):
+    """
+    Implementation of the insertion sort as seen
+    in professor Eleni Drinea's Algortihm for Data Science class
+    :param my_list: list | list to sort
+    :return: sorted list
+    """
+    for i in range(1, len(my_list)):
+        key = my_list[i]
+        j = i - 1
+        while j >= 0 and my_list[j] > key:
+            my_list[j + 1] = my_list[j]
+            j = j - 1
+        my_list[j+1] = key
+    return my_list
+
 
 if __name__ == '__main__':
 
@@ -61,8 +77,14 @@ if __name__ == '__main__':
         sorted_l = insertion_sort(l, in_place=False)
         print( "List sorted : {}".format(sorted_l))
 
-    if 1:
+    if 0:
         l = [1, 4, 5, 5, 5, 8, 8, 10, 0, -1, -2, 10, 9]
         print("List to sort : {}".format(l))
         sorted_l = insertion_sort(l, in_place=False)
+        print("List sorted : {}".format(sorted_l))
+
+    if 1:
+        l = [1, 4, 5, 5, 5, 8, 8, 10, 0, -1, -2, 10, 9]
+        print("List to sort : {}".format(l))
+        sorted_l = insertion_sort2(l)
         print("List sorted : {}".format(sorted_l))
