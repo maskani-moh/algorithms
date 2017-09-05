@@ -55,7 +55,7 @@ def insertion_sort(my_list, order='ascending', in_place=True):
 def insertion_sort2(my_list):
     """
     Implementation of the insertion sort as seen
-    in professor Eleni Drinea's Algortihm for Data Science class
+    in professor Eleni Drinea's Algorithm for Data Science class
     :param my_list: list | list to sort
     :return: sorted list
     """
