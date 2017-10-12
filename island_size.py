@@ -1,5 +1,22 @@
-# Exercise 695 of Leetcode
+"""
+Two solutions presented for the Exercise 695 of Leetcode.
+
+The aim is to find the maximum area of an island given a binary grid.
+The idea is to find the maximum size of the connected component (4 directions)
+in the grid.
+
+Method: Depth-first Search
+"""
+
+
 def maxAreaOfIsland(grid):
+    """
+    Function returning the greatest area of all the connected components
+    in the grid (if any).
+
+    :param grid: List[List[int]]
+    :return: int
+    """
     seen = set()
 
     def area(r, c):
@@ -17,8 +34,11 @@ def maxAreaOfIsland(grid):
 
 def maxAreaOfIsland2(grid):
     """
-    :type grid: List[List[int]]
-    :rtype: int
+    Function returning the greatest area of all the connected components
+    in the grid (if any).
+
+    :param grid: List[List[int]]
+    :return: int
     """
     # Size of the matrix grid
     m, n = len(grid), len(grid[0])
