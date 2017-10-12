@@ -49,6 +49,7 @@ def maxAreaOfIsland2(grid):
             self.value = grid[i][j]
             self.visited = False
             # Corners of the grid
+            # TODO: Fix recursion issue here
             if i == 0 and j == 0:
                 self.neighbors = [Node(0, 1), Node(1, 0)]
             elif i == m - 1 and j == n - 1:
